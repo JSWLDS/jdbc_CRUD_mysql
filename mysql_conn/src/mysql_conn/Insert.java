@@ -16,7 +16,7 @@ public class Insert {
 		Connection conn = gr.returnConn();
 		
 		ResultSet rs = gr.getResult(table_name);
-		ResultSetMetaData rsmd = rs.getMetaData(); //rs의 정보를 얻어오는 메소드
+		ResultSetMetaData rsmd = rs.getMetaData();
 		
 		int total = gr.getColumnCnt(table_name);
 		String sql = "INSERT INTO " + table_name + " VALUES (NULL, ";

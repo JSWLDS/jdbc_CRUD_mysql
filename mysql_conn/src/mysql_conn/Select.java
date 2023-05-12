@@ -15,7 +15,7 @@ public class Select {
 		GetResult gr = (GetResult)c1.newInstance();
 		
 		ResultSet rs = gr.getResult(table_name);
-		ResultSetMetaData rsmd = rs.getMetaData(); //rs의 정보를 얻어오는 메소드
+		ResultSetMetaData rsmd = rs.getMetaData();
 		
 		 while(rs.next()) {
 			for (int i = 1; i <=rsmd.getColumnCount(); i++) {
