@@ -50,7 +50,7 @@ public class Main {
 					int id = sc.nextInt();
 					update.updateColumn(table_name, id);
 				}
-				else if(num == 3) {
+				else if(num == 4) {
 
 					System.out.print("삭제할 컬럼의 id를 입력하세요 : ");
 					int id = sc.nextInt();
