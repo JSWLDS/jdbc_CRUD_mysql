@@ -12,9 +12,10 @@ public class Main {
 		Select select = new Select();
 		Insert insert = new Insert();
 		Update update = new Update();
+		Delete delete = new Delete();
 		
 		while(true) {
-			System.out.println("작업을 선택하세요. (1. 조회 2. 추가 3. 업데이트 4. 종료)");
+			System.out.println("작업을 선택하세요. ( 1. 조회 2. 추가 3. 업데이트 4. 삭제 5. 종료 )");
 			
 			int num = sc.nextInt();
 			String menu;
@@ -23,11 +24,12 @@ public class Main {
 			case 1: menu = "조회"; break; 
 			case 2: menu = "추가"; break; 
 			case 3: menu = "변경"; break; 
+			case 4: menu = "삭제"; break;
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + num);
 			}
 			
-			if(num == 4) {
+			if(num == 5) {
 				System.out.println("종료되었습니다.");
 				break;
 			}
@@ -47,6 +49,12 @@ public class Main {
 					System.out.print("변경할 컬럼의 id를 입력하세요 : ");
 					int id = sc.nextInt();
 					update.updateColumn(table_name, id);
+				}
+				else if(num == 3) {
+
+					System.out.print("삭제할 컬럼의 id를 입력하세요 : ");
+					int id = sc.nextInt();
+					delete.deleteColumn(table_name, id);
 				}
 			}catch (Exception e) {
 				new Exception();
