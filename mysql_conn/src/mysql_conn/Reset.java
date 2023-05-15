@@ -33,9 +33,6 @@ public class Reset {
 		pstmt = conn.prepareStatement(sql_4);
 		pstmt.executeUpdate();
 		
-
-		System.out.println("sucessful");
-		
 	}
 	
 	public void idCountReset(String table_name) throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException {
